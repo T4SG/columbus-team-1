@@ -45,8 +45,8 @@
 
 <body>
 <div id="container">
-    <video id="video" width="640" height="480" autoplay="true"></video>
-    <button id="snap" class="sexyButton">Snap Photo</button>
+    <video id="video" class ="center" width="640" height="480" autoplay="true"></video>
+    <!--<button id="snap" class="sexyButton">Snap Photo</button>-->
     <canvas id="canvas" width="640" height="480"></canvas>
 
 </div>
@@ -82,7 +82,7 @@
             }
 
             // Trigger photo take
-            document.getElementById("snap").addEventListener("click", function() {
+            document.getElementById("video").addEventListener("click", function() {
                 context.drawImage(video, 0, 0, 640, 480);
             });
         }, false);
