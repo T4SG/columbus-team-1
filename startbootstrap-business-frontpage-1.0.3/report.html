@@ -1,16 +1,32 @@
   <title>Report</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <head><link href="css/bootstrap.min.css" rel="stylesheet"></head>
+  <script src="report.js"></script>
   <h1>What's going on?</h1>
-  <h4>Select Report Type</h4>
-  <span class = "login-form">
-            <form>
-                <div class="combo_div">
-                    <select name="report_type" id="report_type">
-                        <option value="community_service"> Community Service</option>
-                         <option value="academics"> Academics</option>
-                         <option value="social events"> Social Events</option>
-                         <option value="attendance"> Attendance</option>
-                    </select>
-                </div>
-            </form>
-        </span>
+
+        <label><h3>Select Report Type</h3></label>
+    <div class="choices">
+      <input type="radio" name="report" value="community_service">Community Service
+      <br>
+      <div id="academ">
+      <input type="radio" name="report" value="academics" delivery(document.getElementById("academ"))>Academics
+      </div>
+    </div>
+
+      <div id="academInfo" class="report">
+        <label><h4>Academics</h4></label>
+        <br><br>
+        Name of class: <input type="text" name="name">
+        <br><br>
+        Name of Assignment: <input type="text" name="name">
+        <br><br>
+        Grade Received: <input type="text" name="name">
+      </div>
+
+      <div id="serviceInfo" class="report">
+        <label><h4>Community Service</h4></label>
+        <br><br>
+        Name of Event: <input type="text" name="name">
+        <br><br>
+        Hours Spent at Event: <input type="text" name="name">
+      </div>
