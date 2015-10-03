@@ -5,27 +5,48 @@
 <meta content="stuff, to, help, search, engines, not" name="keywords">
 <meta content="What this page is about." name="description">
 <meta content="Display Webcam Stream" name="title">
+
+<link href="css/style.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/business-frontpage.css" rel="stylesheet">
+
 <title>Display Webcam Stream</title>
   
-<style>
-#container {
-    margin: 0px auto;
-    width: 500px;
-    height: 375px;
-    border: 10px #333 solid;
-}
-#videoElement {
-    width: 500px;
-    height: 375px;
-    background-color: #666;
-}
-</style>
+
 </head>
-  
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="index.html">Home</a>
+                <a class="navbar-brand" href="http://lebronjamesfamilyfoundation.org/">Lebron James Family Foundation</a>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="login.html">Logout</a>
+                    </li>
+                   
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
 <body>
 <div id="container">
-    <video id="video" width="640" height="480" autoplay="true"></video>
-    <button id="snap" class="sexyButton">Snap Photo</button>
+    <video id="video" class ="center" width="640" height="480" autoplay="true"></video>
+    <!--<button id="snap" class="sexyButton">Snap Photo</button>-->
     <canvas id="canvas" width="640" height="480"></canvas>
 
 </div>
@@ -61,7 +82,7 @@
             }
 
             // Trigger photo take
-            document.getElementById("snap").addEventListener("click", function() {
+            document.getElementById("video").addEventListener("click", function() {
                 context.drawImage(video, 0, 0, 640, 480);
             });
         }, false);
@@ -78,5 +99,5 @@
         body .one .bsa_it_p { display: none; }
         body #bsap_aplink, body #bsap_aplink:hover { display: block; font-size: 10px; margin: 12px 15px 0; text-align: right; }
     </style>
-    
+
 </html>
