@@ -1,42 +1,74 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Progress</title>
+<head>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/business-frontpage.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
-    <h1><center>My Progress</center></h1>
-    <!--Load the AJAX API-->
- 
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['School',     8],
-          ['Study',      2],
-          ['TV/Video Games',  3],
-          ['Sleep', 8],
-          ['Sports',    3]
-        ]);
-
-        var options = {
-          title: 'My Daily Activities',
-          pieHole: 0.4,
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-        chart.draw(data, options);
-      }
-    </script>
+  <meta charset="UTF-8">
+</head>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
       
-  </head>
-  <body>
-    <center>
+      <a class="navbar-brand" href="index.html">Home</a>
+      <a class="navbar-brand" href="http://lebronjamesfamilyfoundation.org/">Lebron James Family Foundation</a>
+
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="login.html">Logout</a>
+        </li>
+        
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<title>Progress</title>
+
+<h1><center>My Progress</center></h1>
+<!--Load the AJAX API-->
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.load("visualization", "1", {packages:["corechart"]});
+  google.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['School',     8],
+      ['Study',      2],
+      ['TV/Video Games',  3],
+      ['Sleep', 8],
+      ['Sports',    3]
+      ]);
+
+    var options = {
+      title: 'My Daily Activities',
+      pieHole: 0.4,
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+    chart.draw(data, options);
+  }
+</script>
+
+
+<body>
+  <center>
     <div id="donutchart" style="width: 900px; height: 500px;"></div>
   </center>
-  </body>
+</body>
 </html>
